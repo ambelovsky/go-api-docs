@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	http.HandleFunc("/help/", apidoc.HTTPHandlerWithPrefix("/help"))
+	http.HandleFunc("/", apidoc.HTTPHandlerWithPrefix("/"))
 	//...
 	if err := http.ListenAndServe(":8080", nil); err != nil {
 		fmt.Println(err)
